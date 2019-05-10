@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "441122403172",
+    "firebase_url": "https://githubapiusers-64f13.firebaseio.com",
+    "project_id": "githubapiusers-64f13",
+    "storage_bucket": "githubapiusers-64f13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441122403172:android:5c6f11d72fa08a1b",
+        "android_client_info": {
+          "package_name": "com.pixelart.githubapiusers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441122403172-5uekudp8h8sgokfga5d8gmemng6vbm1h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pixelart.githubapiusers",
+            "certificate_hash": "cd45e8d23272070923aaed191b6734d4b45fa0c6"
+          }
+        },
+        {
+          "client_id": "441122403172-0glf08dtn4san0m33iiccj6vhlmjr2dl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk-20BvjzLSWiBuKURJsR8eNEJ6VoQ9bA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441122403172-0glf08dtn4san0m33iiccj6vhlmjr2dl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
