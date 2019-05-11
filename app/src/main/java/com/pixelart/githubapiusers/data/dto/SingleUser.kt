@@ -3,7 +3,7 @@ package com.pixelart.githubapiusers.data.dto
 
 import com.squareup.moshi.Json
 
-data class SigleUser(
+data class SingleUser(
     val login: String,
     val id: Int,
     @Json(name = "node_id")
