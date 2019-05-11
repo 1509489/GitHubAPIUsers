@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pixelart.githubapiusers.AppController
 import com.pixelart.githubapiusers.R
 import com.pixelart.githubapiusers.adapter.UsersAdapter
+import com.pixelart.githubapiusers.common.RxBus
 import com.pixelart.githubapiusers.data.dto.AllUsers
 import com.pixelart.githubapiusers.di.fragment.FragmentModule
 import kotlinx.android.synthetic.main.fragment_home.view.*
@@ -61,6 +63,10 @@ class UsersFragment : Fragment(), UsersAdapter.OnItemClickedListener {
     }
 
     override fun onItemClicked(position: Int) {
+        RxBus.INSTANCE.post(userList[position])
+        val itemView = rootView.rvUsers.findViewHolderForAdapterPosition(position)?.itemView
 
+        val action = UsersFragmentDirections.actionUserToProfile()
+        itemView?.let { Navigation.findNavController(it).navigate(action) }
     }
 }
