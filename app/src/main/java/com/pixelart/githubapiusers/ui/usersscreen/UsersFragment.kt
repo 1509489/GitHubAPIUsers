@@ -63,7 +63,7 @@ class UsersFragment : Fragment(), UsersAdapter.OnItemClickedListener {
     }
 
     override fun onItemClicked(position: Int) {
-        RxBus.INSTANCE.post(userList[position])
+        RxBus.INSTANCE.post(userList[position].login)
         val itemView = rootView.rvUsers.findViewHolderForAdapterPosition(position)?.itemView
 
         val action = UsersFragmentDirections.actionUserToProfile()
