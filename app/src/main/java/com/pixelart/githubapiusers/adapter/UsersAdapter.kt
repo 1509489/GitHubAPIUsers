@@ -35,6 +35,7 @@ class UsersAdapter(private val listener: OnItemClickedListener): ListAdapter<All
             userName.text = user.login
             GlideApp.with(view.context)
                 .load(user.avatarUrl)
+                .override(100, 100)
                 .into(avatar)
         }
     }
