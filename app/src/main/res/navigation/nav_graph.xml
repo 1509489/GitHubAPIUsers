@@ -3,6 +3,11 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
             app:startDestination="@id/homeFragment">
-    <fragment android:id="@+id/homeFragment" android:name="com.pixelart.githubapiusers.ui.homescreen.HomeFragment"
-              android:label="Users" tools:layout="@layout/fragment_home"/>
+    <fragment android:id="@+id/homeFragment" android:name="com.pixelart.githubapiusers.ui.usersscreen.UsersFragment"
+              android:label="Users" tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_user_to_profile" app:destination="@id/profileFragment"/>
+    </fragment>
+    <fragment android:id="@+id/profileFragment"
+              android:name="com.pixelart.githubapiusers.ui.profilescreen.ProfileFragment"
+              android:label="Profile" tools:layout="@layout/fragment_profile"/>
 </navigation>

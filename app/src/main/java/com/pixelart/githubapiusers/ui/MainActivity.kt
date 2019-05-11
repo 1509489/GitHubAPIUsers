@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity(), FirebaseAuth.AuthStateListener {
         setContentView(R.layout.activity_main)
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        NavigationUI.setupActionBarWithNavController(this, navController)
         auth = FirebaseAuth.getInstance()
     }
 
