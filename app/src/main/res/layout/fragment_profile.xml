@@ -1,14 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".ui.profilescreen.ProfileFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.profilescreen.ProfileFragment">
+    <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp" tools:src="@tools:sample/avatars[0]"
+            android:id="@+id/ivAvatar"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="100dp"
+            app:layout_constraintTop_toTopOf="parent" android:contentDescription="@string/avatar_image"
+            app:layout_constraintHorizontal_bias="0.558"/>
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
-
-</FrameLayout>
+            android:text="@string/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleUsername" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/ivAvatar" android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/tvUsername"
+            app:layout_constraintBottom_toTopOf="@+id/titleName" app:layout_constraintVertical_chainStyle="packed"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvUsername" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@+id/titleUsername" android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/ivAvatar" android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/tvName"
+            app:layout_constraintVertical_chainStyle="packed" app:layout_constraintHorizontal_chainStyle="packed"/>
+    <TextView
+            android:text="@string/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleName" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/titleUsername"
+            android:textSize="24sp" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/tvName" app:layout_constraintBottom_toTopOf="@+id/titleRepos"
+            app:layout_constraintVertical_chainStyle="packed"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvName" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@+id/titleName" android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/tvUsername"
+            android:textSize="24sp" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/tvRepos" app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+    <TextView
+            android:text="@string/repositories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleRepos" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/titleName"
+            android:textSize="24sp" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/tvRepos" app:layout_constraintBottom_toTopOf="@+id/titleGists"
+            app:layout_constraintVertical_chainStyle="packed"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvRepos" app:layout_constraintStart_toEndOf="@+id/titleRepos"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/tvName" android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/tvGists"
+            app:layout_constraintVertical_chainStyle="packed" app:layout_constraintHorizontal_chainStyle="packed"/>
+    <TextView
+            android:text="@string/gists"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleGists" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/titleRepos" android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/tvGists"
+            app:layout_constraintBottom_toTopOf="@+id/titleFollowers"
+            app:layout_constraintVertical_chainStyle="packed"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvGists" app:layout_constraintStart_toEndOf="@+id/titleGists"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/tvRepos" android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/tvFollowers"
+            app:layout_constraintVertical_chainStyle="packed" app:layout_constraintHorizontal_chainStyle="packed"/>
+    <TextView
+            android:text="@string/followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleFollowers" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/titleGists"
+            android:layout_marginTop="8dp" android:textSize="24sp" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/tvFollowers" app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintBottom_toTopOf="@+id/titleFollowing"
+            app:layout_constraintVertical_chainStyle="packed"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvFollowers" app:layout_constraintStart_toEndOf="@+id/titleFollowers"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvGists" android:layout_marginTop="8dp" android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintBottom_toTopOf="@+id/tvFollowing" app:layout_constraintVertical_chainStyle="packed"/>
+    <TextView
+            android:text="@string/following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleFollowing" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/titleFollowers"
+            android:layout_marginTop="8dp" android:textSize="24sp" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/tvFollowing" app:layout_constraintVertical_chainStyle="packed"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvFollowing" app:layout_constraintStart_toEndOf="@+id/titleFollowing"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintTop_toBottomOf="@+id/tvFollowers"
+            android:layout_marginTop="8dp" android:textSize="24sp" app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintHorizontal_chainStyle="packed" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
