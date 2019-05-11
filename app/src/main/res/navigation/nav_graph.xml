@@ -3,6 +3,6 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
             app:startDestination="@id/homeFragment">
-    <fragment android:id="@+id/homeFragment" android:name="com.pixelart.githubapiusers.ui.homescreen.HomeFragment"
+    <fragment android:id="@+id/homeFragment" android:name="com.pixelart.githubapiusers.ui.usersscreen.UsersFragment"
               android:label="Users" tools:layout="@layout/fragment_home"/>
 </navigation>

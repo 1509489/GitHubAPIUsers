@@ -1,4 +1,4 @@
-package com.pixelart.githubapiusers.ui.homescreen
+package com.pixelart.githubapiusers.ui.usersscreen
 
 
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.pixelart.githubapiusers.R
 
-class HomeFragment : Fragment() {
+class UsersFragment : Fragment() {
 
     private lateinit var rootView: View
 
