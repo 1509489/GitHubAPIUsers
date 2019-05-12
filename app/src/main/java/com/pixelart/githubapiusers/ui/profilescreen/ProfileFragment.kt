@@ -63,4 +63,9 @@ class ProfileFragment : Fragment() {
             }
         })
     }
+
+    override fun onStop() {
+        super.onStop()
+        viewModel.cancelRequest()
+    }
 }

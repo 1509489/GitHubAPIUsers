@@ -23,7 +23,7 @@ open class BaseRepository {
         return if (response.isSuccessful)
             NetworkResponse.Success(response.body()!!)
         else
-            NetworkResponse.Error(IOException("Data fetching failed due to: $error"))
+            NetworkResponse.Error(IOException(error))
 
     }
 }
