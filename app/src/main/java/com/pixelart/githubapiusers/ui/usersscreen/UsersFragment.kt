@@ -19,7 +19,6 @@ import com.pixelart.githubapiusers.di.fragment.FragmentModule
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import javax.inject.Inject
 
-@Suppress("UNCHECKED_CAST")
 class UsersFragment : Fragment(), UsersAdapter.OnItemClickedListener {
     @Inject lateinit var viewModel: AllUsersViewModel
 
@@ -54,12 +53,19 @@ class UsersFragment : Fragment(), UsersAdapter.OnItemClickedListener {
         }
     }
 
+
+    @Suppress("UNCHECKED_CAST")
     override fun onResume() {
         super.onResume()
         viewModel.getUsersLiveData().observe(this, Observer {users->
             adapter.submitList(users)
             userList = users as ArrayList<AllUsers>
         })
+    }
+
+    override fun onStop() {
+        super.onStop()
+        viewModel.cancelRequest()
     }
 
     override fun onItemClicked(position: Int) {
