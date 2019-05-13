@@ -7,6 +7,14 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('keystore.jks')
+            storePassword 'KeyStore'
+            keyAlias = 'key'
+            keyPassword 'KeyStore'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.pixelart.githubapiusers"
@@ -21,6 +29,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {

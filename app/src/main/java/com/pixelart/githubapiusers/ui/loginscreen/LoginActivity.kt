@@ -58,6 +58,7 @@ class LoginActivity : AppCompatActivity(), FirebaseAuth.AuthStateListener {
                 firebaseAuthWithGoogle(account!!)
             } catch (e: ApiException) {
                 Log.w(TAG, "Google sign in failed", e)
+                Toast.makeText(this, "Sign in failed", Toast.LENGTH_SHORT).show()
             }
         }
     }

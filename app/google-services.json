@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "441122403172-a11ftdl66qarme55gb8s93eph05d70ed.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pixelart.githubapiusers",
+            "certificate_hash": "eb72eb8e5574db6fb53d9b3f7e8d78d742e1b1ae"
+          }
+        },
+        {
           "client_id": "441122403172-5uekudp8h8sgokfga5d8gmemng6vbm1h.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
